@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      padding: 20px;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+    .bookmark-list {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .folder {
+      margin: 5px 0;
+    }
+    .folder-header {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      padding: 8px;
+      background: #f5f5f5;
+      border-radius: 4px;
+    }
+    .folder-header:hover {
+      background: #eee;
+    }
+    .folder-content {
+      margin-left: 20px;
+      display: none;
+    }
+    .folder-content.expanded {
+      display: block;
+    }
+    .bookmark-item {
+      display: flex;
+      align-items: center;
+      padding: 5px;
+      border-bottom: 1px solid #eee;
+    }
+    .bookmark-title {
+      margin-left: 10px;
+      flex-grow: 1;
+    }
+    .actions {
+      position: sticky;
+      top: 0;
+      background: white;
+      padding: 10px 0;
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 20px;
+
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .toggle-icon {
+      margin-right: 8px;
+      width: 20px;
+      text-align: center;
+    }
+    button {
+      padding: 8px 16px;
+      margin-right: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background: #fff;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+    button:hover {
+      background: #f5f5f5;
+    }
+
+    #deleteSelected {
+      background-color: #F4B1B2;
+      border-color:#D72822;
+      margin-inline-start: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="bookmark-list">
+    <div class="actions">
+      <button id="selectAll">Select All <object data="/assets/svg/select-all.svg" type="image/svg+xml" width="20" height="20"></object></button>
+      <button id="deselectAll">Deselect All <object data="/assets/svg/select-all-off.svg" type="image/svg+xml" width="20" height="20"></object></button>
+      <button id="expandAll">Expand All</button>
+      <button id="collapseAll">Collapse All</button>
+      <button id="deleteSelected">Delete Selected <object data="/assets/svg/delete.svg" type="image/svg+xml" width="20" height="20"></object></button>
+    </div>
+    <div id="bookmarkList"></div>
+  </div>
+  <script src="settings.js"></script>
+</body>
+</html>

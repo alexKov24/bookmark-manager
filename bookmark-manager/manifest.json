@@ -1,0 +1,20 @@
+
+{
+    "manifest_version": 2,
+    "name": "Bulk Bookmark Manager (beta)",
+    "version": "1.0",
+    "description": "Simple bookmark manager with bulk selection and deletion capabilities",
+    "permissions": [
+      "bookmarks"
+    ],
+    "browser_action": {
+      "default_title": "Open Bookmark Manager"
+    },
+    "options_ui": {
+      "page": "settings.html",
+      "open_in_tab": true
+    },
+    "background": {
+      "scripts": ["background.js"]
+    }
+  }
