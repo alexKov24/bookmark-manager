@@ -2,7 +2,7 @@
 
 A Firefox extension that makes managing your bookmarks easier with bulk operations, folder organization, and intuitive selection tools.
 
-![Main View](screenshots/menu.png)
+![Main View](bookmark-manager/assets/screenshots/menu.png)
 
 
 ## ✨ Features
